@@ -1,6 +1,10 @@
-import "./MainContent.css";
+import './MainContent.css';
+import React, { useEffect, useHistory } from 'react';
+import { Link } from 'react-router-dom';
 
 const MainContent = () => {
+  useEffect(() => {});
+
   return (
     <div className="contents">
       <p>

@@ -23,9 +23,19 @@ const Login = () => {
     };
 
     const testing = async () => {
-      const res = await axios.post("/api/login", login);
-      const data = await res.json();
-      console.log(data);
+      try {
+        const res = await axios.post("/api/login", login);
+        const data = await res.json();
+        if ({ data }) {
+          alert("Login successful");
+          window.location.href = "/content";
+        } else {
+          alert("Please check your username and password");
+        }
+        console.log(data);
+      } catch (err) {
+        console.log(err);
+      }
     };
 
     testing();
